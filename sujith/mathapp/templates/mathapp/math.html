@@ -1,67 +1,49 @@
-
-
 <html>
-
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>POWER OF LAMP IN INCANDESCENT BULD</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <style type="text/css">
-        .box {
-            display: block;
-            width: 500px;
-            min-height: 300px;
-            font-size: 20px;
-            background: rgb(21, 208, 215);
-            background: linear-gradient(90deg, rgb(99, 237, 118) 9%, rgb(193, 166, 202) 56%);
-            border-radius: 10px;
-            box-shadow: rgba(239, 5, 24, 0.35) 0px 5px 15px;
-        }
-
-        .formelt {
-            color: whitesmoke;
-            text-align: center;
-            margin-top: 7px;
-            margin-bottom: 6px;
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-            padding-top: 20px;
-        }
-        input{
-            margin: 5px;
-            padding: 5px;
-            border-radius: 5px;
-            border: none;
-
-        }
-    </style>
+<style>
+body{
+    background-color:pink;
+}
+.formelt{
+    color:black;
+    text-align: center;
+    margin-top: 7px;
+    margin-bottom: 6px;
+}
+h1{
+    color:purple;
+    text-align: center;
+    padding-top: 20px;
+}
+</style>
 </head>
-
 <body>
-    <div class="edge">
-        <div class="box">
-            <h1>POWER OF LAMP IN INCANDESCENT BULB</h1>
-            <form method="POST">
-                {% csrf_token %}
-                <div class="formelt">
-                    INTENSITY : <input type="text" name="Intensity" value="{{I}}"></input>(in A)<br />
-                </div>
-                <div class="formelt">
-                    RESISITANCE : <input type="text" name="Resistence" value="{{R}}"></input>(in Ω)<br />
-                </div>
-                <div class="formelt">
-                    <input type="submit" value="Calculate"></input><br />
-                </div>
-                <div class="formelt">
-                    POWER : <input type="text" name="Power" value="{{Power}}"></input>W<br />
-                </div>
-            </form>
-        </div>
+<div class="edge">
+<div class="box">
+<h1>BMI Calculation (BMI = w / h^2 )</h1>
+<br>
+<h3 align="center">Sujith RB(25009845) </h3>
+<form method="POST">
+    {% csrf_token %}
+    <div class="formelt">
+        weight (w): <input type="text" name="weight" value="{{w}}">(in kg)<br/>
     </div>
+    <div class="formelt">
+        height (h): <input type="text" name="height" value="{{h}}">(in m)<br/>
+    </div>
+    <div class="formelt">
+    <input type="submit" value="Calculate"><br/>
+    </div>
+    <div class="formelt">
+        BMI : <input type="text" name="BMI" value="{{BMI}}">(in kg/m^2 )<br/>
+    </div>
+</form>
+</div>
+</div>
 </body>
-
 </html>
+
+
+
+
+

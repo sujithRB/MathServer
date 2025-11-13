@@ -1,6 +1,14 @@
 from django.contrib import admin
 from django.urls import path
-from bulb import views
+from mathapp import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.powerlamp,name="powerlamp"),]
+    path('BMI/', views.BMIcalc, name="BMIcalc"),
+    path('', views.BMIcalc, name="BMIcalcroot"),  
+]
+
+
+
+
+
