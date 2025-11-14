@@ -32,7 +32,6 @@ Publish the website in the given URL.
 
 ## PROGRAM:
 ```
-math.html
 <html>
 
 <head>
@@ -76,7 +75,7 @@ math.html
 
 <body>
     <div class="edge">
-        <div class="box">
+     <div class="box">
             <h1>POWER OF LAMP IN INCANDESCENT BULB</h1>
             <form method="POST">
                 {% csrf_token %}
@@ -98,18 +97,13 @@ math.html
 </body>
 
 </html>
-urls.py
-
 from django.contrib import admin
 from django.urls import path
-from bulb import views
+from mathapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.powerlamp,name="powerlamp"),]
-
-  views.py
-
-  from django.shortcuts import render
+ from django.shortcuts import render
 
 def powerlamp(request):
     context={}
@@ -128,10 +122,10 @@ def powerlamp(request):
         context['I'] = I
         context['R'] = R
         print('Power=',Power)
-    return render(request,'mathapp/power.html',context)
+    return render(request,'math.html',context)
 
 
-  
+
 ```
 
 ## OUTPUT - SERVER SIDE:

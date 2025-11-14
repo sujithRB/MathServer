@@ -1,29 +1,21 @@
-
-
 from django.shortcuts import render
 
-def BMIcalc(request):
-    context = {}
-    context['BMI'] = "0"
-    context['w'] = "0"
-    context['h'] = "0"
-
+def powerlamp(request):
+    context={}
+    context['Power'] = ""
+    context['I'] = ""
+    context['R'] = ""
     if request.method == 'POST':
         print("POST method is used")
-        w = request.POST.get('weight', '0')
-        h = request.POST.get('height', '0')
-
-        print('weight =', w)
-        print('height =', h)
-        BMI = (int(w) ) / (float(h)**2)
-
-        context['BMI'] = BMI
-        context['w'] = w
-        context['h'] = h
-
-        print('BMI =', BMI)
-
-    return render(request, 'mathapp/math.html', context)
-
-
+        I = request.POST.get('Intensity','')
+        R = request.POST.get('Resistence','')
+        print('request=',request)
+        print('Intensity=',I)
+        print('Resistence=',R)
+        Power = int(I) * int(I) * int(R)
+        context['Power'] = Power
+        context['I'] = I
+        context['R'] = R
+        print('Power=',Power)
+    return render(request,'math.html',context)
 
