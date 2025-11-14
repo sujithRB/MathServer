@@ -129,9 +129,11 @@ def powerlamp(request):
 ```
 
 ## OUTPUT - SERVER SIDE:
-[text](../../README.md)
+<img width="1060" height="657" alt="Screenshot (6)" src="https://github.com/user-attachments/assets/958c6284-8c23-450f-9ec6-a04c20890149" />
+
 
 ## OUTPUT - WEBPAGE:
-![alt text](output.jpg)
+<img width="1448" height="829" alt="Screenshot 2025-11-14 142625" src="https://github.com/user-attachments/assets/a97a4cab-a988-41ec-b789-8350a6f8924b" />
+
 ## RESULT:
 The a web page to calculate vehicle mileage and fuel efficiency using server-side scripts is created successfully.
